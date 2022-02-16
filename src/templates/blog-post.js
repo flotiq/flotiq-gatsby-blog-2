@@ -5,7 +5,7 @@ import Layout from '../layouts/layout';
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
     return (
-        <Layout additionalClass={['bg-white px-6']}>
+        <Layout additionalClass={['']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4">
                 <div>Blog post</div>
             </div>
