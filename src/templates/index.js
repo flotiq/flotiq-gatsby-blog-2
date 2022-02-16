@@ -10,6 +10,10 @@ const IndexPage = ({ data, pageContext }) => {
             <Helmet>
                 <title>{data.site.siteMetadata.title}</title>
             </Helmet>
+            <div className="grid grid-cols-4">
+                <div className="bg-primary">1</div>
+                <div className="col-span-3">2</div>
+            </div>
             {posts.map((post) => (
                 <a href={`/${post.slug}`}><p key={post.id}>{post.title}</p></a>
             ))}
