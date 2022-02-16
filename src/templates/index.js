@@ -2,16 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import HomepageSidebar from '../sections/HomepageSidebar';
 
 const IndexPage = ({ data, pageContext }) => {
     const posts = data.allBlogpost.nodes;
     return (
-        <Layout additionalClass={['bg-light-gray']}>
+        <Layout additionalClass={['']}>
             <Helmet>
                 <title>{data.site.siteMetadata.title}</title>
             </Helmet>
             <div className="grid grid-cols-4">
-                <div className="bg-primary">1</div>
+                <HomepageSidebar />
                 <div className="col-span-3">2</div>
             </div>
             {posts.map((post) => (
