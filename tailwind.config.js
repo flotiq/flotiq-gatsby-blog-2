@@ -14,6 +14,7 @@ module.exports = {
             colors: {
                 primary: '#FBB03B',
                 gray: '#7f7f7f',
+                'light-gray': '#fafafa',
             },
             fontFamily: {
                 lato: ['Lato', 'sans-serif'],
