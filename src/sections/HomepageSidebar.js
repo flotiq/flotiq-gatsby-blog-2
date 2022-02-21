@@ -24,9 +24,9 @@ const HomepageSidebar = ({
         </div>
         <div className="mt-8 flex justify-center space-x-6">
             {socialIcons.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                <a key={item.name} href={item.href} className="text-gray hover:text-secondary">
                     <span className="sr-only">{item.name}</span>
-                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                    <item.icon className="h-6 w-6 hover:text-secondary" aria-hidden="true" />
                 </a>
             ))}
         </div>
