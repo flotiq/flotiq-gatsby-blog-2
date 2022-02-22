@@ -1,13 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import BlogPostSidebar from '../sections/BlogPostSidebar';
+import Logo from '../assets/blog-logo.svg';
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BlogPostTemplate = ({ data }) => {
     const post = data.blogpost;
     return (
         <Layout additionalClass={['']}>
-            <div className="max-w-7xl mx-auto mt-20 pb-4">
-                <div>Blog post</div>
+            <div className="grid grid-cols-12">
+                <BlogPostSidebar logo={Logo} />
+                <div className="col-span-11">
+                    Content
+                </div>
             </div>
         </Layout>
     );
