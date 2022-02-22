@@ -89,17 +89,17 @@ const HomepageSidebar = ({
                                             <Image url={Logo} additionalClasses={['h-10']} />
                                         </div>
                                     </div>
-                                    <div className="font-bold uppercase">
+                                    <div className="flex flex-col justify-center font-bold uppercase">
                                         <Header
-                                            className="p-0 !text-2xl tracking-widest leading-none"
+                                            className="p-0 !text-xl tracking-widest leading-none"
                                             text={headerText1}
                                         />
                                         <Header
-                                            className="p-0 !text-2xl tracking-widest leading-none"
+                                            className="p-0 !text-xl tracking-widest leading-none"
                                             text={headerText2}
                                         />
                                         <Header
-                                            className="p-0 !text-2xl tracking-widest leading-none"
+                                            className="p-0 !text-xl tracking-widest leading-none"
                                             text={headerText3}
                                         />
                                     </div>
@@ -130,26 +130,32 @@ const HomepageSidebar = ({
                     )}
                 </Disclosure>
             </div>
-            <div className="px-5 lg:px-14 py-24 font-bold">
-                <Header className="p-0 !text-3xl lg:!text-4xl tracking-widest mb-1 uppercase" text={headerText1} />
-                <Header className="p-0 !text-3xl lg:!text-4xl tracking-widest mb-1 uppercase" text={headerText2} />
-                <Header className="p-0 !text-3xl lg:!text-4xl tracking-widest uppercase" text={headerText3} />
-                <Header className="mt-14 !text-base lg:!text-lg !font-normal" text={subheaderText} level={4} />
-                <Paragraph className="mt-10 !text-sm lg:!text-base !font-light" text={paragraphText} />
+            <div className="flex flex-col px-10 py-5 md:py-24 font-bold">
+                <div className="hidden md:block">
+                    <Header className="p-0 !text-3xl lg:!text-4xl tracking-widest mb-1 uppercase" text={headerText1} />
+                    <Header className="p-0 !text-3xl lg:!text-4xl tracking-widest mb-1 uppercase" text={headerText2} />
+                    <Header className="p-0 !text-3xl lg:!text-4xl tracking-widest uppercase" text={headerText3} />
+                </div>
+                <Header className="mt-5 md:mt-14 !text-base lg:!text-lg !font-normal" text={subheaderText} level={4} />
+                <Paragraph className="mt-8 md:mt-10 !text-sm lg:!text-base !font-light" text={paragraphText} />
                 <Button
                     label={buttonLabel}
                     size="lg"
                     rounded="none"
-                    additionalClasses={['py-5 !px-10 lg:!px-14 mt-10']}
+                    additionalClasses={['w-fit mx-auto md:mx-0 py-5 lg:!px-14 mt-10']}
                 />
             </div>
         </div>
         <div>
-            <div className="mt-8 flex justify-center space-x-6">
+            <div className="mt-8 mb-8 md:mb-0 flex justify-center space-x-2">
                 {socialIcons.social.map((item) => (
-                    <a key={item.name} href={item.href} className="text-gray hover:text-secondary">
+                    <a
+                        key={item.name}
+                        href={item.href}
+                        className="text-gray hover:text-secondary p-2 bg-light-gray rounded-lg"
+                    >
                         <span className="sr-only">{item.name}</span>
-                        <item.icon className="h-6 w-6 hover:text-secondary" aria-hidden="true" />
+                        <item.icon className="h-5 w-5 lg:h-6 md:w-6 hover:text-secondary" aria-hidden="true" />
                     </a>
                 ))}
             </div>
