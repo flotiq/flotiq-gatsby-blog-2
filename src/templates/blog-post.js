@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import Footer from '../components/Footer';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
@@ -9,6 +10,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <div className="max-w-7xl mx-auto mt-20 pb-4">
                 <div>Blog post</div>
             </div>
+            <Footer />
         </Layout>
     );
 };
