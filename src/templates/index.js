@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import HomepageSidebar from '../sections/HomepageSidebar';
 import Logo from '../assets/flotiq-logo-badge.svg';
+import BlogCards from '../sections/BlogCards';
 
 const IndexPage = ({ data, pageContext }) => {
     const posts = data.allBlogpost.nodes;
@@ -27,11 +28,9 @@ const IndexPage = ({ data, pageContext }) => {
                     buttonLabel="SAY HI!"
                     flotiqLogoBadge={Logo}
                 />
-                <div className="lg:col-span-2 xl:col-span-3">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 p-5">
-                        {posts.map((post) => (
-                            <a className="bg-primary" href={`/${post.slug}`}><p key={post.id}>{post.title}</p></a>
-                        ))}
+                <div className="lg:col-span-2 xl:col-span-3 p-5 md:p-10 lg:p-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
+                        <BlogCards posts={posts} />
                     </div>
                 </div>
             </div>
