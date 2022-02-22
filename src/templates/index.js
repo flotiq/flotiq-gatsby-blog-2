@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import Footer from '../components/Footer';
 
 const IndexPage = ({ data, pageContext }) => {
     const posts = data.allBlogpost.nodes;
@@ -13,6 +14,7 @@ const IndexPage = ({ data, pageContext }) => {
             {posts.map((post) => (
                 <a href={`/${post.slug}`}><p key={post.id}>{post.title}</p></a>
             ))}
+            <Footer additionalClass={['md:hidden']} />
         </Layout>
     );
 };
