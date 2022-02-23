@@ -2,7 +2,7 @@ import React from 'react';
 import { Content, Header, Image } from 'flotiq-components-react';
 
 const BlogPostContent = ({ post, date, readingTime, tags, postAuthor, additionalClass }) => (
-    <div className={['basis-full md:basis-auto md:pl-[130px]', ...additionalClass].join(' ')}>
+    <div className={['', ...additionalClass].join(' ')}>
         <Image
             url={post.headerImage[0] && post.headerImage[0].localFile.publicURL}
             stretched

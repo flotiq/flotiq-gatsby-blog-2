@@ -6,6 +6,7 @@ import Layout from '../layouts/layout';
 import BlogPostSidebar from '../sections/BlogPostSidebar';
 import Logo from '../assets/blog-logo.svg';
 import BlogPostContent from '../sections/BlogPostContent';
+import NextArticle from '../sections/NextArticle';
 
 const readingTime = '7 min';
 const tags = ['#photo', '#cookig', '#food'];
@@ -19,18 +20,23 @@ const BlogPostTemplate = ({ data }) => {
                 <title>{post.title}</title>
             </Helmet>
             <div className="flex flex-wrap">
-                <BlogPostSidebar
-                    logo={Logo}
-                    additionalClass={['w-full md:basis-auto md:w-[130px]']}
-                />
-                <BlogPostContent
-                    post={post}
-                    date={moment(post.flotiqInternal.createdAt).format(' Do MMMM yyyy')}
-                    readingTime={readingTime}
-                    tags={tags}
-                    postAuthor={postAuthor}
-                    additionalClass={['']}
-                />
+                <div className="flex flex-col md:fixed w-full md:w-[130px]">
+                    <BlogPostSidebar
+                        logo={Logo}
+                        additionalClass={['w-full md:basis-auto md:w-[130px]']}
+                    />
+                </div>
+                <div className="basis-full md:basis-auto md:pl-[130px]">
+                    <BlogPostContent
+                        post={post}
+                        date={moment(post.flotiqInternal.createdAt).format(' Do MMMM yyyy')}
+                        readingTime={readingTime}
+                        tags={tags}
+                        postAuthor={postAuthor}
+                        additionalClass={['']}
+                    />
+                    <NextArticle />
+                </div>
             </div>
         </Layout>
     );
