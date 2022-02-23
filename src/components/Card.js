@@ -10,7 +10,7 @@ const CustomCard = ({ title, excerpt, date, readingTime, tags, image }) => (
         <Card.Img src={image} alt={title} additionalContainerClasses={['order-1 lg:order-2']} />
         <Card.Body
             additionalClasses={[
-                'flex flex-col items-start justify-between order-2 lg:order-1 px-5 md:px-10 pt-10 pb-5',
+                'flex flex-col items-start justify-between order-2 lg:order-1 px-5 pt-10 pb-5',
             ]}
         >
             <div className="flex flex-wrap justify-start text-sm font-light mb-3 space-x-5">
