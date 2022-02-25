@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button, Header, Image, Paragraph } from 'flotiq-components-react';
-import { Disclosure } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Button, Header, Image, Paragraph, PoweredByFlotiq } from 'flotiq-components-react';
 import Logo from '../assets/blog-logo.svg';
 
 const socialIcons = {
@@ -71,7 +69,7 @@ const socialIcons = {
 };
 
 const HomepageSidebar = ({
-    headerText1, headerText2, headerText3, subheaderText, paragraphText, buttonLabel, flotiqLogoBadge,
+    headerText1, headerText2, headerText3, subheaderText, paragraphText, buttonLabel,
 }) => (
     <div className="bg-white flex flex-col justify-between">
         <div>
@@ -112,16 +110,7 @@ const HomepageSidebar = ({
             <div className="hidden md:flex justify-between items-center w-full
             px-5 py-5 mt-7 md:mt-15 rounded-t-xl bg-light-gray"
             >
-                <div className="flex items-center">
-                    <img
-                        className="block h-4 mr-2"
-                        src={flotiqLogoBadge}
-                        alt="Flotiq"
-                    />
-                    <p className="text-center text-sm font-semibold">
-                        Powered by Flotiq
-                    </p>
-                </div>
+                <PoweredByFlotiq />
                 <p className="text-center text-sm font-light">
                     Copyright &copy; Flotiq 2022
                 </p>
