@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import HomepageSidebar from '../sections/HomepageSidebar';
-import Logo from '../assets/flotiq-logo-badge.svg';
 import Footer from '../components/Footer';
 
 const IndexPage = ({ data, pageContext }) => {
@@ -26,7 +25,6 @@ const IndexPage = ({ data, pageContext }) => {
                     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                     sunt in culpa qui officia deserunt mollit anim id est laborum."
                     buttonLabel="SAY HI!"
-                    flotiqLogoBadge={Logo}
                 />
                 <div className="lg:col-span-2 xl:col-span-3">
                     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 p-5">
