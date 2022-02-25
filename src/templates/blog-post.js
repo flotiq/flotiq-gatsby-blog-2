@@ -1,31 +1,37 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import moment from 'moment';
+import { Helmet } from 'react-helmet';
 import Layout from '../layouts/layout';
 import BlogPostSidebar from '../sections/BlogPostSidebar';
 import Logo from '../assets/blog-logo.svg';
+import BlogPostContent from '../sections/BlogPostContent';
 import Footer from '../components/Footer';
+
+const readingTime = '7 min';
+const tags = ['#photo', '#cookig', '#food'];
+const postAuthor = 'John Doe';
 
 const BlogPostTemplate = ({ data }) => {
     const post = data.blogpost;
     return (
         <Layout additionalClass={['bg-light-gray']}>
+            <Helmet>
+                <title>{post.title}</title>
+            </Helmet>
             <div className="flex flex-wrap">
-                <BlogPostSidebar logo={Logo} additionalClass={['w-full md:basis-auto md:w-[130px]']} />
-                <div className="basis-full md:basis-auto md:pl-[130px]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Ut vehicula ante malesuada, maximus dolor quis, commodo neque.
-                    Sed volutpat feugiat dapibus. Morbi ultricies mi in neque vehicula
-                    pellentesque. Sed gravida eros tellus, vitae finibus magna semper
-                    non. Etiam eu leo nec orci scelerisque vestibulum id in quam. Etiam
-                    ultricies non enim sit amet consequat. Maecenas lobortis vitae leo
-                    eget congue. Sed nibh sem, consequat ut placerat id, elementum non
-                    tellus. Pellentesque ac faucibus ligula. Quisque eget vehicula nisi.
-                    Donec eget eros non lectus hendrerit iaculis ut id purus. Sed iaculis
-                    neque ut felis efficitur maximus. Sed eros orci, sodales maximus
-                    tincidunt vehicula, luctus a orci. Morbi vitae ultrices nisi.
-                    Aenean quis ex eget quam vulputate tincidunt. Ut sit amet sapien
-                    dictum, sollicitudin arcu et, facilisis libero.
-                </div>
+                <BlogPostSidebar
+                    logo={Logo}
+                    additionalClass={['w-full md:basis-auto md:w-[130px]']}
+                />
+                <BlogPostContent
+                    post={post}
+                    date={moment(post.flotiqInternal.createdAt).format(' Do MMMM yyyy')}
+                    readingTime={readingTime}
+                    tags={tags}
+                    postAuthor={postAuthor}
+                    additionalClass={['']}
+                />
             </div>
             <Footer />
         </Layout>
