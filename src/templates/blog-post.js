@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import BlogPostSidebar from '../sections/BlogPostSidebar';
 import Logo from '../assets/blog-logo.svg';
+import Footer from '../components/Footer';
 
 const BlogPostTemplate = ({ data }) => {
     const post = data.blogpost;
@@ -26,6 +27,7 @@ const BlogPostTemplate = ({ data }) => {
                     dictum, sollicitudin arcu et, facilisis libero.
                 </div>
             </div>
+            <Footer />
         </Layout>
     );
 };

@@ -18,11 +18,13 @@ module.exports = {
             },
             fontFamily: {
                 lato: ['Lato', 'sans-serif'],
+                inter: ['Inter', 'sans - serif'],
             },
         },
     },
     plugins: [
         require('@tailwindcss/typography'),
+        require('@tailwindcss/line-clamp'),
     ],
     presets: [
         require('./node_modules/flotiq-components-react/dist/tailwind.preset'),
