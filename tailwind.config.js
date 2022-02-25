@@ -24,6 +24,7 @@ module.exports = {
     },
     plugins: [
         require('@tailwindcss/typography'),
+        require('@tailwindcss/line-clamp'),
     ],
     presets: [
         require('./node_modules/flotiq-components-react/dist/tailwind.preset'),
