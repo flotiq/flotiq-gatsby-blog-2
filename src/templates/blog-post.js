@@ -6,11 +6,11 @@ import Layout from '../layouts/layout';
 import BlogPostSidebar from '../sections/BlogPostSidebar';
 import Logo from '../assets/blog-logo.svg';
 import BlogPostContent from '../sections/BlogPostContent';
+import Footer from '../components/Footer';
 
 const readingTime = '7 min';
 const tags = ['#photo', '#cookig', '#food'];
 const postAuthor = 'John Doe';
-import Footer from '../components/Footer';
 
 const BlogPostTemplate = ({ data }) => {
     const post = data.blogpost;
