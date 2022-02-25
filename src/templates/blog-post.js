@@ -8,6 +8,7 @@ import BlogPostSidebar from '../sections/BlogPostSidebar';
 import Logo from '../assets/blog-logo.svg';
 import BlogPostContent from '../sections/BlogPostContent';
 import BlogCards from '../sections/BlogCards';
+import Footer from '../components/Footer';
 
 const readingTime = '7 min';
 const tags = ['#photo', '#cookig', '#food'];
@@ -50,6 +51,7 @@ const BlogPostTemplate = ({ data }) => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </Layout>
     );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Card } from 'flotiq-components-react';
 
 const CustomCard = ({ title, excerpt, date, readingTime, tags, image }) => (
@@ -15,14 +16,14 @@ const CustomCard = ({ title, excerpt, date, readingTime, tags, image }) => (
         >
             <div className="flex flex-wrap justify-start text-sm font-light mb-3 space-x-5">
                 {tags && tags.map((tag) => (
-                    <a
-                        href="/"
+                    <Link
+                        to="/"
                         className="flex items-center justify-center text-sm
                         font-light text-primary font-normal"
                         key={tag}
                     >
                         {tag}
-                    </a>
+                    </Link>
                 ))}
             </div>
             <Card.Title additionalClasses={['uppercase !text-2xl line-clamp-1']}>
