@@ -16,7 +16,7 @@ const socialIcons = {
             name: 'Discord',
             href: 'https://discord.com/invite/FwXcHnX',
             icon: (props) => (
-                <svg fill="gray" {...props}>
+                <svg fill="gray" viewBox="0 0 24 24" {...props}>
                     <path fillRule="evenodd" d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm3.248 18.348l-.371-1.295.896.833.847.784 1.505 1.33v-12.558c0-.798-.644-1.442-1.435-1.442h-9.38c-.791 0-1.435.644-1.435 1.442v9.464c0 .798.644 1.442 1.435 1.442h7.938zm-1.26-3.206l-.462-.567c.917-.259 1.267-.833 1.267-.833-.287.189-.56.322-.805.413-.35.147-.686.245-1.015.301-.672.126-1.288.091-1.813-.007-.399-.077-.742-.189-1.029-.301-.161-.063-.336-.14-.511-.238l-.028-.016-.007-.003-.028-.016-.028-.021-.196-.119s.336.56 1.225.826l-.469.581c-1.547-.049-2.135-1.064-2.135-1.064 0-2.254 1.008-4.081 1.008-4.081 1.008-.756 1.967-.735 1.967-.735l.07.084c-1.26.364-1.841.917-1.841.917l.413-.203c.749-.329 1.344-.42 1.589-.441l.119-.014c.427-.056.91-.07 1.414-.014.665.077 1.379.273 2.107.672 0 0-.553-.525-1.743-.889l.098-.112s.959-.021 1.967.735c0 0 1.008 1.827 1.008 4.081 0 0-.573.977-2.142 1.064zm-.7-3.269c-.399 0-.714.35-.714.777 0 .427.322.777.714.777.399 0 .714-.35.714-.777 0-.427-.315-.777-.714-.777zm-2.555 0c-.399 0-.714.35-.714.777 0 .427.322.777.714.777.399 0 .714-.35.714-.777.007-.427-.315-.777-.714-.777z" clipRule="evenodd" />
                 </svg>
             ),
@@ -69,24 +69,22 @@ const socialIcons = {
 
 const BlogPostSidebar = ({ logo, additionalClass }) => (
     <div className={['bg-white', ...additionalClass].join(' ')}>
-        <div className="flex flex-col md:fixed md:w-[130px]">
-            <div className="hidden w-full md:flex items-center justify-center bg-primary py-20 md:h-[30vh]">
-                <Image url={logo} additionalClasses={['h-14 lg:h-18']} />
-            </div>
-            <div className="bg-white py-8 flex md:flex-col items-center
+        <div className="hidden w-full md:flex items-center justify-center bg-primary py-20 md:h-[30vh]">
+            <Image url={logo} additionalClasses={['h-14 lg:h-18']} />
+        </div>
+        <div className="bg-white py-8 flex md:flex-col items-center
             justify-center space-x-2 md:space-x-0 md:space-y-4 md:h-[70vh]"
-            >
-                {socialIcons.social.map((item) => (
-                    <a
-                        key={item.name}
-                        href={item.href}
-                        className="text-gray hover:text-secondary p-2 bg-light-gray rounded-lg"
-                    >
-                        <span className="sr-only">{item.name}</span>
-                        <item.icon className="h-6 w-6 hover:text-secondary" aria-hidden="true" />
-                    </a>
-                ))}
-            </div>
+        >
+            {socialIcons.social.map((item) => (
+                <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray hover:text-secondary p-2 bg-light-gray rounded-lg"
+                >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-5 w-5 md:h-6 md:w-6 hover:text-secondary" aria-hidden="true" />
+                </a>
+            ))}
         </div>
     </div>
 );
