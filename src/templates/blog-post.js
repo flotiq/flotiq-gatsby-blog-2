@@ -10,6 +10,7 @@ import BlogPostContent from '../sections/BlogPostContent';
 const readingTime = '7 min';
 const tags = ['#photo', '#cookig', '#food'];
 const postAuthor = 'John Doe';
+import Footer from '../components/Footer';
 
 const BlogPostTemplate = ({ data }) => {
     const post = data.blogpost;
@@ -32,6 +33,7 @@ const BlogPostTemplate = ({ data }) => {
                     additionalClass={['']}
                 />
             </div>
+            <Footer />
         </Layout>
     );
 };
