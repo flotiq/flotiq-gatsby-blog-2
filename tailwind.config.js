@@ -18,6 +18,7 @@ module.exports = {
             },
             fontFamily: {
                 lato: ['Lato', 'sans-serif'],
+                inter: ['Inter', 'sans - serif'],
             },
         },
     },
