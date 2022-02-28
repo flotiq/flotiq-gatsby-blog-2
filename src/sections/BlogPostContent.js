@@ -23,23 +23,23 @@ const BlogPostContent = ({ post, date, readingTime, tags, postAuthor, additional
                     </p>
                     <div />
                 </div>
-                <div className="mt-4 mx-0 md:mt-0 basis-full lg:basis-auto
-                flex flex-wrap items-center justify-center lg:justify-end space-x-6
-                text-primary font-normal"
-                >
-                    <p>
-                        tags:
-                    </p>
-                    {tags && tags.map((tag) => (
-                        <a
-                            href="/"
-                            className="hover:text-secondary underline"
-                            key={tag}
-                        >
-                            {tag}
-                        </a>
-                    ))}
-                </div>
+                {/* <div className="mt-4 mx-0 md:mt-0 basis-full lg:basis-auto */}
+                {/* flex flex-wrap items-center justify-center lg:justify-end space-x-6 */}
+                {/* text-primary font-normal" */}
+                {/* > */}
+                {/*    <p> */}
+                {/*        tags: */}
+                {/*    </p> */}
+                {/*    {tags && tags.map((tag) => ( */}
+                {/*        <a */}
+                {/*            href="/" */}
+                {/*            className="hover:text-secondary underline" */}
+                {/*            key={tag} */}
+                {/*        > */}
+                {/*            {tag} */}
+                {/*        </a> */}
+                {/*    ))} */}
+                {/* </div> */}
             </div>
             <Header
                 text={post.title}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
+import { Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
 import HomepageSidebar from '../sections/HomepageSidebar';
 import Footer from '../components/Footer';
@@ -31,6 +32,7 @@ const IndexPage = ({ data, pageContext }) => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
                         <BlogCards posts={posts} />
                     </div>
+                    <Pagination page={pageContext.currentPage} numOfPages={pageContext.numPages} rounded="none" />
                 </div>
             </div>
             <Footer additionalClass={['md:hidden']} />
