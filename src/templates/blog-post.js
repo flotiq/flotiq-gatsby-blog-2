@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 const readingTime = '7 min';
 const tags = ['#photo', '#cookig', '#food'];
 const postAuthor = 'John Doe';
-const nextArtcileHeaderText = 'Next article to read:';
+const nextArticleHeaderText = 'Next article to read:';
 
 const BlogPostTemplate = ({ data }) => {
     const post = data.blogpost;
@@ -42,7 +42,7 @@ const BlogPostTemplate = ({ data }) => {
                     <div className="px-5 md:px-10 lg:px-16 py-8">
                         <Header
                             level={2}
-                            text={nextArtcileHeaderText}
+                            text={nextArticleHeaderText}
                             additionalClasses={['mb-5 uppercase !text-2xl md:!text-3xl']}
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

@@ -91,6 +91,7 @@ const HomepageSidebar = ({
                     size="lg"
                     rounded="none"
                     additionalClasses={['w-fit mx-auto md:mx-0 py-5 lg:!px-14 mt-10']}
+                    onClick={() => window.open('mailto:hello@flotiq.com')}
                 />
             </div>
         </div>
@@ -112,7 +113,9 @@ const HomepageSidebar = ({
             >
                 <PoweredByFlotiq />
                 <p className="text-center text-sm font-light">
-                    Copyright &copy; Flotiq 2022
+                    Copyright &copy; Flotiq
+                    {' '}
+                    {new Date().getFullYear()}
                 </p>
             </div>
 

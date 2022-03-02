@@ -1,6 +1,6 @@
 {
-  "name": "example",
-  "label": "Example",
+  "name": "blogpost",
+  "label": "Blog Post",
   "schemaDefinition": {
     "type": "object",
     "allOf": [
@@ -10,42 +10,116 @@
       {
         "type": "object",
         "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9-_]*$",
+            "minLength": 1
+          },
           "title": {
             "type": "string",
             "minLength": 1
           },
-          "header": {
+          "content": {
+            "type": "object",
+            "minLength": 1,
+            "properties": {
+              "time": {
+                "type": "number"
+              },
+              "blocks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "text": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": true
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "excerpt": {
             "type": "string",
             "minLength": 1
+          },
+          "headerImage": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataSource"
+            },
+            "minItems": 0
           }
         }
       }
     ],
     "required": [
       "title",
-      "header"
+      "slug",
+      "excerpt",
+      "content"
     ],
     "additionalProperties": false
   },
   "metaDefinition": {
-    "propertiesConfig": {
-      "title": {
-        "inputType": "text",
-        "unique": false,
-        "isTitlePart": true,
-        "helpText": "",
-        "label": "Title"
-      },
-      "header": {
-        "inputType": "text",
-        "unique": false,
-        "helpText": "",
-        "label": "Header"
-      }
-    },
     "order": [
       "title",
-      "header"
-    ]
+      "slug",
+      "excerpt",
+      "content",
+      "headerImage"
+    ],
+    "propertiesConfig": {
+      "slug": {
+        "label": "Slug",
+        "unique": true,
+        "helpText": "Slug can only have alphanumerical characters, - and _",
+        "inputType": "text"
+      },
+      "title": {
+        "label": "Title",
+        "unique": false,
+        "helpText": "",
+        "inputType": "text",
+        "isTitlePart": true
+      },
+      "content": {
+        "label": "Content",
+        "unique": false,
+        "helpText": "",
+        "inputType": "block"
+      },
+      "excerpt": {
+        "label": "Excerpt",
+        "unique": false,
+        "helpText": "",
+        "inputType": "textarea"
+      },
+      "headerImage": {
+        "label": "Header image",
+        "unique": false,
+        "helpText": "",
+        "inputType": "datasource",
+        "validation": {
+          "relationContenttype": "_media"
+        }
+      }
+    }
   }
 }
