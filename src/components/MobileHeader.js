@@ -29,7 +29,7 @@ const MobileHeader = ({ additionalClass, headerText1, headerText2, headerText3 }
                                 text={headerText3}
                             />
                         </div>
-                        <div className="-mr-2 flex items-center md:hidden px-4">
+                        <div className="flex items-center md:hidden px-4">
                             {/* Mobile menu button */}
                             <Disclosure.Button
                                 className="inline-flex items-center justify-center p-2 rounded-md
