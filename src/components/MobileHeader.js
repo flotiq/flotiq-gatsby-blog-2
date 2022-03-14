@@ -12,7 +12,7 @@ const MobileHeader = ({ additionalClass, headerText1, headerText2, headerText3 }
                     <div className="flex justify-between">
                         <div className="flex">
                             <div className="flex-shrink-0 flex items-center bg-primary px-12 py-8">
-                                <Image url={Logo} additionalClasses={['h-10']} />
+                                <Image url={Logo} additionalClasses={['h-10']} alt="Logo" />
                             </div>
                         </div>
                         <div className="flex flex-col justify-center font-bold uppercase">

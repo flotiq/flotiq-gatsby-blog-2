@@ -13,6 +13,10 @@ const IndexPage = ({ data, pageContext }) => {
         <Layout additionalClass={['']}>
             <Helmet>
                 <title>{data.site.siteMetadata.title}</title>
+                <meta
+                    name="description"
+                    content={data.site.siteMetadata.description}
+                />
             </Helmet>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 <HomepageSidebar
@@ -45,6 +49,7 @@ export const pageQuery = graphql`
         site {
             siteMetadata {
                 title
+                description
             }
         }
         allBlogpost(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {

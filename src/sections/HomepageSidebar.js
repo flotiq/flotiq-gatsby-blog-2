@@ -75,7 +75,7 @@ const HomepageSidebar = ({
         <div>
             <div>
                 <div className="hidden md:flex items-center justify-center bg-primary py-20 lg:py-28">
-                    <Image url={Logo} additionalClasses={['h-20 lg:h-24']} />
+                    <Image url={Logo} additionalClasses={['h-20 lg:h-24']} alt="Logo" />
                 </div>
             </div>
             <div className="flex flex-col px-10 py-5 md:py-24 font-bold">
