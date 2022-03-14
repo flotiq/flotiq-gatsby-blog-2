@@ -22,6 +22,10 @@ const BlogPostTemplate = ({ data }) => {
         <Layout additionalClass={['bg-light-gray']}>
             <Helmet>
                 <title>{post.title}</title>
+                <meta
+                    name="description"
+                    content={post.excerpt}
+                />
             </Helmet>
             <div className="flex flex-wrap">
                 <div className="flex flex-col md:fixed w-full md:w-[130px]">
