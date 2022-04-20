@@ -46,9 +46,10 @@ const BlogPostTemplate = ({ data }) => {
                     <div className="px-5 md:px-10 lg:px-16 py-8">
                         <Header
                             level={2}
-                            text={nextArticleHeaderText}
                             additionalClasses={['mb-5 uppercase !text-2xl md:!text-3xl']}
-                        />
+                        >
+                            {nextArticleHeaderText}
+                        </Header>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                             <BlogCards posts={posts} />
                         </div>

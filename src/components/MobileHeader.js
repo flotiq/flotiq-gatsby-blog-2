@@ -16,18 +16,15 @@ const MobileHeader = ({ additionalClass, headerText1, headerText2, headerText3 }
                             </div>
                         </div>
                         <div className="flex flex-col justify-center font-bold uppercase">
-                            <Header
-                                className="p-0 !text-xl tracking-widest leading-none"
-                                text={headerText1}
-                            />
-                            <Header
-                                className="p-0 !text-xl tracking-widest leading-none"
-                                text={headerText2}
-                            />
-                            <Header
-                                className="p-0 !text-xl tracking-widest leading-none"
-                                text={headerText3}
-                            />
+                            <Header className="p-0 !text-xl tracking-widest leading-none">
+                                {headerText1}
+                            </Header>
+                            <Header className="p-0 !text-xl tracking-widest leading-none">
+                                {headerText2}
+                            </Header>
+                            <Header className="p-0 !text-xl tracking-widest leading-none">
+                                {headerText3}
+                            </Header>
                         </div>
                         <div className="flex items-center md:hidden px-4">
                             {/* Mobile menu button */}

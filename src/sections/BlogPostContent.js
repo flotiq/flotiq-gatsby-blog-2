@@ -42,10 +42,12 @@ const BlogPostContent = ({ post, date, readingTime, tags, postAuthor, additional
                 {/* </div> */}
             </div>
             <Header
-                text={post.title}
                 alignement="center"
                 additionalClasses={['pt-10 pb-10 uppercase text-center lg:text-left']}
-            />
+            >
+                {post.title}
+            </Header>
+
             <Content
                 blocks={post.content.blocks}
                 additionalClasses={['text-sm md:text-lg']}
