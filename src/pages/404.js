@@ -12,7 +12,7 @@ const NotFoundPage = () => (
         <div className="text-center mt-5 mb-5">
             <img src={Logo} alt="Flotiq" width="300px" />
         </div>
-        <Header text="Page not found, sorry" />
+        <Header>Page not found, sorry</Header>
     </main>
 );
 
