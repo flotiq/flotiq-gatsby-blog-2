@@ -5,7 +5,7 @@
       "description": "Flotiq API key"
     },
     "GA_MEASUREMENT_ID": {
-      "description": "GA Measurement ID"
+      "description": "Google Analytics Measurement ID"
     }
   },
   "buildpacks": [
