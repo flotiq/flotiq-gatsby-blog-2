@@ -6,11 +6,10 @@ import Card from '../components/Card';
 const BlogCards = ({ posts }) => (
     <>
         {posts.map((post) => (
-            <Link to={`/${post.slug}`}>
+            <Link to={`/${post.slug}`} key={post.id}>
                 <Card
-                    key={post.id}
                     image={post.headerImage[0] && post.headerImage[0].localFile.publicURL}
-                    tags={['#photo', '#cookig', '#food']}
+                    tags={[]}
                     title={post.title}
                     excerpt={post.excerpt}
                     date={moment(post.flotiqInternal.createdAt).format('Do MMMM yyyy')}
