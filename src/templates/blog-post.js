@@ -11,7 +11,7 @@ import BlogCards from '../sections/BlogCards';
 import Footer from '../components/Footer';
 
 const readingTime = '7 min';
-const tags = ['#photo', '#cookig', '#food'];
+const tags = [];
 const postAuthor = 'John Doe';
 const nextArticleHeaderText = 'Next article to read:';
 
