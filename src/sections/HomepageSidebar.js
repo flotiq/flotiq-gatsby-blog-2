@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Header, Image, Paragraph, PoweredByFlotiq } from 'flotiq-components-react';
+import { Button, Header, Paragraph, PoweredByFlotiq } from 'flotiq-components-react';
 import Logo from '../assets/blog-logo.svg';
 import SocialIcons from '../components/SocialIcons';
+import { StaticImage } from "gatsby-plugin-image";
 
 const HomepageSidebar = ({
     headerText1, headerText2, headerText3, subheaderText, paragraphText, buttonLabel,
@@ -10,7 +11,7 @@ const HomepageSidebar = ({
         <div>
             <div>
                 <div className="hidden md:flex items-center justify-center bg-primary py-20 lg:py-28">
-                    <Image url={Logo} additionalClasses={['h-20 lg:h-24']} alt="Logo" />
+                    <StaticImage src={'../assets/blog-logo.svg'} width={97} height={96} alt={'Logo'} placeholder="none" />
                 </div>
             </div>
             <div className="flex flex-col px-10 py-5 md:py-24 font-bold">
