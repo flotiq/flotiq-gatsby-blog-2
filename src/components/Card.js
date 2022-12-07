@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Card } from 'flotiq-components-react';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const CustomCard = ({ title, excerpt, date, readingTime, tags, image }) => (
     <Card
@@ -19,7 +19,7 @@ const CustomCard = ({ title, excerpt, date, readingTime, tags, image }) => (
                 {tags && tags.map((tag) => (
                     <Link
                         to="/"
-                        className="flex items-center justify-center text-sm 
+                        className="flex items-center justify-center text-sm
                        font-light text-primary font-normal"
                         key={tag}
                     >

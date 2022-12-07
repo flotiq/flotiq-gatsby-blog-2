@@ -1,6 +1,6 @@
 import React from 'react';
 import { Content, Header } from 'flotiq-components-react';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const BlogPostContent = ({ post, date, readingTime, tags, postAuthor, additionalClass }) => (
     <div className={['', ...additionalClass].join(' ')}>
@@ -20,15 +20,15 @@ const BlogPostContent = ({ post, date, readingTime, tags, postAuthor, additional
                     </p>
                     <div />
                 </div>
-                <div className="mt-4 mx-0 md:mt-0 basis-full lg:basis-auto 
-                 flex flex-wrap items-center justify-center lg:justify-end space-x-6 
+                <div className="mt-4 mx-0 md:mt-0 basis-full lg:basis-auto
+                 flex flex-wrap items-center justify-center lg:justify-end space-x-6
                  text-primary font-normal"
                 >
-                    {tags != "" &&
+                    {tags != '' && (
                         <p>
                             tags:
                         </p>
-                    }
+                    )}
                     {tags && tags.map((tag) => (
                         <a
                             href="/"
