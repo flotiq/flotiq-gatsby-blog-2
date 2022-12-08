@@ -1,8 +1,8 @@
 import React from 'react';
-import { Header, Image } from 'flotiq-components-react';
+import { Header } from 'flotiq-components-react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import Logo from '../assets/blog-logo.svg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const MobileHeader = ({ additionalClass, headerText1, headerText2, headerText3 }) => (
     <Disclosure as="nav" className={['md:hidden', ...additionalClass].join(' ')}>
@@ -12,7 +12,9 @@ const MobileHeader = ({ additionalClass, headerText1, headerText2, headerText3 }
                     <div className="flex justify-between">
                         <div className="flex">
                             <div className="flex-shrink-0 flex items-center bg-primary px-12 py-8">
-                                <Image url={Logo} additionalClasses={['h-10']} alt="Logo" />
+                                <StaticImage
+                                    src="../assets/blog-logo.svg" width={40} height={40} alt="Logo" placeholder="none"
+                                />
                             </div>
                         </div>
                         <div className="flex flex-col justify-center font-bold uppercase">

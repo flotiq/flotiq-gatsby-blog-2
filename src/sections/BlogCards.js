@@ -8,7 +8,7 @@ const BlogCards = ({ posts }) => (
         {posts.map((post) => (
             <Link to={`/${post.slug}`} key={post.id}>
                 <Card
-                    image={post.headerImage[0] && post.headerImage[0].localFile.publicURL}
+                    image={post.headerImage[0] && post.headerImage[0].localFile}
                     tags={[]}
                     title={post.title}
                     excerpt={post.excerpt}
