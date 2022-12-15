@@ -62,105 +62,109 @@ const BlogPostTemplate = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-    query BlogPostBySlug($slug: String!) {
-        site {
-            siteMetadata {
-                title
-            }
-        }
-        allBlogpost(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4, filter: {slug: {ne: $slug}}) {
-            nodes {
-                headerImage {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                        }
-                    }
-                }
-                id
-                excerpt
-                slug
-                title
-                flotiqInternal {
-                    createdAt
-                }
-            }
-        }
-        blogpost( slug: { eq: $slug } ) {
-            id
-            title
-            headerImage {
-                extension
-                url
-                width
-                height
-                localFile {
-                    publicURL
-                    childImageSharp {
-                        gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                    }
-                }
-            }
-            flotiqInternal {
-                createdAt
-            }
-            content {
-                blocks {
-                    id
-                    data {
-                        alignment
-                        anchor
-                        caption
-                        code
-                        content
-                        extension
-                        fileName
-                        height
-                        items {
-                            content
-                            items {
-                                content
-                                items {
-                                    content
-                                    items {
-                                        content
-                                        items {
-                                            content
-                                            items {
-                                                content
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        level
-                        message
-                        stretched
-                        style
-                        text
-                        title
-                        url
-                        width
-                        withBackground
-                        withBorder
-                        withHeadings
-                    }
-                    tunes {
-                        alignmentTuneTool {
-                            alignment
-                        }
-                    }
-                    type
-                }
-            }
-        }
+query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+      }
     }
+    allBlogpost(
+      sort: {flotiqInternal: {createdAt: DESC}}
+      limit: 4
+      filter: {slug: {ne: $slug}}
+    ) {
+      nodes {
+        headerImage {
+          extension
+          url
+          width
+          height
+          localFile {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+            }
+          }
+        }
+        id
+        excerpt
+        slug
+        title
+        flotiqInternal {
+          createdAt
+        }
+      }
+    }
+    blogpost(slug: {eq: $slug}) {
+      id
+      title
+      headerImage {
+        extension
+        url
+        width
+        height
+        localFile {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+          }
+        }
+      }
+      flotiqInternal {
+        createdAt
+      }
+      content {
+        blocks {
+          id
+          data {
+            alignment
+            anchor
+            caption
+            code
+            content
+            extension
+            fileName
+            height
+            items {
+              content
+              items {
+                content
+                items {
+                  content
+                  items {
+                    content
+                    items {
+                      content
+                      items {
+                        content
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            level
+            message
+            stretched
+            style
+            text
+            title
+            url
+            width
+            withBackground
+            withBorder
+            withHeadings
+          }
+          tunes {
+            alignmentTuneTool {
+              alignment
+            }
+          }
+          type
+        }
+      }
+    }
+  }
 `;
 
 export default BlogPostTemplate;
