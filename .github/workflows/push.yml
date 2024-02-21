@@ -5,7 +5,7 @@ on:
       - master
   workflow_dispatch:
 jobs:
-  test:
+  test-build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
