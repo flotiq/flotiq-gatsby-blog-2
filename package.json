@@ -19,7 +19,7 @@
     "@fontsource/lato": "^5.0.20",
     "@headlessui/react": "^1.7.19",
     "@heroicons/react": "1.0.6",
-    "@popperjs/core": "^2.11.0",
+    "@popperjs/core": "^2.11.8",
     "@tailwindcss/typography": "^0.5.12",
     "flotiq-components-react": "^1.1.5",
     "gatsby": "^5.13.4",
