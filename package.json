@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.17",
-    "@fontsource/lato": "^5.0.20",
+    "@fontsource/lato": "^5.0.21",
     "@headlessui/react": "^1.7.19",
     "@heroicons/react": "1.0.6",
     "@popperjs/core": "^2.11.8",
