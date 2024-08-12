@@ -20,7 +20,7 @@
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "1.0.6",
     "@popperjs/core": "^2.11.8",
-    "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/typography": "^0.5.14",
     "flotiq-components-react": "^1.2.2",
     "gatsby": "^5.13.7",
     "gatsby-plugin-gatsby-cloud": "^5.13.1",
